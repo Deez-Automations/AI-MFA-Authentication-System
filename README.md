@@ -5,7 +5,8 @@ A comprehensive **Multi-Factor Authentication (MFA)** system featuring AI-powere
 ![PHP](https://img.shields.io/badge/PHP-8.0+-777BB4?style=flat-square&logo=php&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-13+-336791?style=flat-square&logo=postgresql&logoColor=white)
 ![TensorFlow.js](https://img.shields.io/badge/TensorFlow.js-BlazeFace-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+
+> ⚠️ **Proprietary Software** - All Rights Reserved © 2025 Deez Automations
 
 ---
 
@@ -21,8 +22,7 @@ A comprehensive **Multi-Factor Authentication (MFA)** system featuring AI-powere
 - [Security Features](#-security-features)
 - [Project Structure](#-project-structure)
 - [API Endpoints](#-api-endpoints)
-- [Contributing](#-contributing)
-- [License](#-license)
+- [Author](#-author)
 
 ---
 
@@ -316,24 +316,6 @@ AI-MFA-Authentication-System/
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
 ## 👤 Author
 
 **Deez Automations**
@@ -353,5 +335,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 <p align="center">
-  Made with ❤️ by Deez Automations
+  Made with ❤️ by Deez Automations<br>
+  <strong>© 2025 Deez Automations. All Rights Reserved.</strong>
 </p>
+
