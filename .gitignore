@@ -1,0 +1,95 @@
+# =====================================================
+# AI-MFA-Authentication-System .gitignore
+# =====================================================
+
+# =========================
+# Environment & Credentials
+# =========================
+.env
+.env.local
+.env.production
+config.local.php
+*.pem
+*.key
+secrets/
+
+# =========================
+# Dependencies
+# =========================
+node_modules/
+vendor/
+bower_components/
+
+# =========================
+# Build Outputs
+# =========================
+dist/
+build/
+*.map
+
+# =========================
+# IDE & Editor
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+*.sublime-*
+
+# =========================
+# OS Generated
+# =========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# =========================
+# PHP & Server
+# =========================
+php_errors.log
+error_log
+*.log
+.php_cs.cache
+.phpunit.result.cache
+
+# =========================
+# Binaries & Installers
+# =========================
+*.exe
+*.msi
+*.dmg
+*.pkg
+*.deb
+*.rpm
+xampp*.exe
+
+# =========================
+# Temporary Files
+# =========================
+*.tmp
+*.temp
+*.bak
+*.cache
+.cache/
+
+# =========================
+# Project Specific
+# =========================
+# Old/duplicate project folder
+projectt/
+
+# Screenshots (move to docs first)
+# *.jpg
+# *.png
+
+# Face data uploads (if stored locally)
+uploads/faces/
+face_data/
