@@ -6,16 +6,9 @@
 session_start();
 header('Content-Type: application/json'); // Set JSON header early
 
-// Enable error reporting for debugging
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
-
-// Log all errors to file
-ini_set('log_errors', '1');
-ini_set('error_log', 'php_errors.log');
-
-require 'db.php';
+// Load configuration (handles error reporting based on APP_DEBUG)
+require_once __DIR__ . '/config.php';
+require_once __DIR__  . '/db.php';
 error_log("face.php: Script started");
 
 function sanitize_input($data) {
@@ -64,7 +57,7 @@ try {
         error_log("face.php: Database connection test successful");
     } catch (PDOException $e) {
         error_log("face.php: Database connection test failed: " . $e->getMessage());
-        throw new Exception('Database connection test failed: ' + $e->getMessage());
+        throw new Exception('Database connection test failed: ' . $e->getMessage());
     }
     
     // Handle actions
@@ -168,7 +161,7 @@ try {
             echo json_encode(['success' => true, 'message' => 'Face data saved successfully']);
         } catch (PDOException $e) {
             error_log("face.php: Database error: " . $e->getMessage());
-            throw new Exception('Database error: ' + $e->getMessage());
+            throw new Exception('Database error: ' . $e->getMessage());
         }
     } else {
         error_log("face.php: Invalid action: $action");

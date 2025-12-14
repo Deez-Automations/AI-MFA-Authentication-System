@@ -6,16 +6,9 @@
 session_start();
 header('Content-Type: application/json'); // Set JSON header early
 
-// Enable error reporting for debugging
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
-
-// Log all errors to file
-ini_set('log_errors', '1');
-ini_set('error_log', 'php_errors.log'); // Changed to relative path for easier access
-
-require_once 'db.php';
+// Load configuration (handles error reporting based on APP_DEBUG)
+require_once __DIR__ . '/config.php';
+require_once __DIR__ . '/db.php';
 error_log("face_login.php: Script started");
 
 function sanitize_input($data) {
