@@ -33,9 +33,7 @@ if (isset($_POST['check_email']) && isset($_POST['email'])) {
         $stmt->execute();
         
         $exists = $stmt->rowCount() > 0;
-        echo json_encode(['exists' => $exists, 'error '
-
- => null]);
+        echo json_encode(['exists' => $exists, 'error' => null]);
     } catch (PDOException $e) {
         error_log("register.php: Email check error - " . $e->getMessage());
         echo json_encode(['exists' => false, 'error' => 'Database error: ' . $e->getMessage()]);
@@ -166,7 +164,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST['check_email']) && !is
         
         // Generate salt and pepper
         $salt = bin2hex(random_bytes(16)); // 32-char random salt
-        $pepper = "my_secure_pepper_123"; // In production, store securely
+        $pepper = SECURITY_PEPPER; // Loaded from config.php
         $combined = $salt . $password . $pepper;
         
         // Generate key (intermediate hash, e.g., using SHA-256 for simplicity)
